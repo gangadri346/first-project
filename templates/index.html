@@ -1,0 +1,36 @@
+<html>
+<head>
+</head>
+<body>
+<center>
+Welcome to Python
+<table border="3px">
+    <thead>
+    <th>name</th>
+    <th>address</th>
+    <th>email</th>
+    <th>gender</th>
+    <th>country</th>
+    <th>marks_percentage</th>
+    </thead>
+{% for i in college_data %}
+    <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.address}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.gender}}</td>
+        <td>{{i.country}}</td>
+        <td>{{i.marks_percentage}}</td>
+          <td>
+             <a href="/students/edit/{{i.name}}">Edit</a>
+        </td>
+        <td><a href="/students/delete/{{i.name}}"> Delete </a></td>
+    </tr>
+{% endfor %}
+</table>
+<td><a href="/students/create/"> Create </a></td><br>
+<td><a href="/students/registration/"> Registration </a></td><br>
+<td><a href="/students/userlogout/"> Logout </a></td>
+</body>
+</center>
+</html>

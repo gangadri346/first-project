@@ -1,0 +1,12 @@
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+</head>
+<body>
+<form method="POST" class="post-form" action="/students/userlogin/">
+    {% csrf_token %}
+    Uname: <input type="text" name="uname">
+    Password: <input type="password" name="password">
+    <button type="submit">Login</button>
+</form>
+</body>
+</html>
